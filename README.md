@@ -89,12 +89,3 @@ Untuk ERD-nya dapat diakses melalui link berikut:
     }
 }
 ```
-
-## Cara Menjalankan Project ini
-
-1. After unzip the project: run command: npm install / yarn
-2. Update the db config based on local config (config/config.json)
-3. Create the database if not exist yet (sequelize / npx sequelize-cli db:create)
-4. Run the migration (sequelize / npx sequelize-cli db:migrate)
-5. Run the seeder (sequelize / npx sequelize-cli db:seed:all)
-6. Run server
