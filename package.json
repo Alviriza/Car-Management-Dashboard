@@ -1,0 +1,26 @@
+{
+  "name": "Car Management Dahboard",
+  "version": "1.0.0",
+  "description": "Binar Challenge 05 : Car Management Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "back": "node server/backend.js",
+    "front" : "node server/frontend.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alviriza/Car-Management-Dashboard.git"
+  },
+  "author": "Muhammad Alviriza Ramadhan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "cloudinary": "^1.32.0",
+    "ejs": "^3.1.8",
+    "express.js": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.24.0"
+  }
+}

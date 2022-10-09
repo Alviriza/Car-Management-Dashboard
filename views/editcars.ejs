@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management Dashboard</title>
+    <link rel="shortcut icon" type="image/svg" href="/images/Logo.svg">
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" type="text/css" href="/style/addcars.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="list-item">
+                    <a href="/" class="sidebar-brand"></a>
+                </div>
+            </div>
+            <div class="sidebar-main">
+                <div class="list-item">
+                    <a href="/">
+                        <img src="/images/Home.svg" alt="Logo">                        
+                    </a>
+                    <span class="description">Dashboard</span>
+                </div>
+                <div class="list-item" id="open">
+                    <img src="/images/Truck.svg" alt="Logo">                        
+                    <span class="description">Cars</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="sidebar-details">
+            <div class="header">
+                <div class="brand">
+                    <a href="/" class="sidebar-brand"></a>
+                </div>
+            </div>
+            <div class="list-details" style="margin-top: 24px;">                
+                <p class="title">CARS</p>
+            </div>
+            <div class="list-details" style="background-color: #CFD4ED;">                
+                <p style="font-weight: bold;">List Car</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <nav>
+                <img src="/images/Menu.svg" alt="Hamburger" id="close" style="cursor: pointer;">
+                <ul>
+                    <li>
+                        <div class="searchbox" style="margin-right: 24px;">
+                            <div class="inputfield">
+                                <img src="/images/Search.svg" alt="" style="padding: 8px;">
+                                <input type="text" placeholder="Search">
+                            </div>                            
+                            <button type="submit">Search</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile">
+                            <img src="/images/Profile.svg" alt="">
+                            <p style="margin-left: 8px; margin-right: 8px;">Unis Badri</p>
+                            <img src="/images/Down.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <p class="pagination"><b>Cars  >  List Car  >  </b>Update Car Information</p>
+
+                <div class="pagetitle">
+                    <h2>Update Car Information</h2>
+                </div>
+                <div class="form-container">
+                    <form action="/editCars/<%= data.id %>" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <label for="name">Nama</label><br>
+                            <input type="text" id="name" placeholder="Avanza" name="name" value="<%= data.name %>">
+                        </div>
+                        <div class="form-row">
+                            <label for="rent">Sewa Per Hari</label><br>
+                            <input type="text" id="rent" placeholder="Rp 0,-" name="rent" value="<%= data.price %>">
+                        </div>
+                        <div class="form-row">
+                            <label for="size">Ukuran</label><br>
+                            <select id="size" name="size">
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div class="form-row" style="margin-bottom: 0;">
+                            <label for="picture">Foto</label>
+                            <div class="picture">
+                                <input type="file" id="picture" name="picture" style="margin-bottom: 4px;" value="<%= data.image %>"> 
+                                <p style="font-size: 10px; color: #8A8A8A;">File size max. 2MB</p>
+                            </div>                                               
+                        </div>
+                        <div class="form-button">
+                            <a href="/"><button type="button">Cancel</button></a>
+                            <button type="submit" style="background-color: #0D28A6; color: white;">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="/script/home.js"></script>
+</body>
+</html>

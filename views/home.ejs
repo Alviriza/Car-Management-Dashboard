@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management Dashboard</title>
+    <link rel="shortcut icon" type="image/svg" href="/images/Logo.svg">
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="list-item">
+                    <a href="/" class="sidebar-brand"></a>
+                </div>
+            </div>
+            <div class="sidebar-main">
+                <div class="list-item">
+                    <a href="/">
+                        <img src="/images/Home.svg" alt="Logo">                        
+                    </a>
+                    <span class="description">Dashboard</span>
+                </div>
+                <div class="list-item" id="open">
+                    <img src="/images/Truck.svg" alt="Logo">                        
+                    <span class="description">Cars</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="sidebar-details">
+            <div class="header">
+                <div class="brand">
+                    <a href="/" class="sidebar-brand"></a>
+                </div>
+            </div>
+            <div class="list-details" style="margin-top: 24px;">                
+                <p class="title">CARS</p>
+            </div>
+            <div class="list-details" style="background-color: #CFD4ED;">                
+                <p style="font-weight: bold;">List Car</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <nav>
+                <img src="/images/Menu.svg" alt="Hamburger" id="close" style="cursor: pointer;">
+                <ul>
+                    <li>
+                        <div class="searchbox" style="margin-right: 24px;">
+                            <div class="inputfield">
+                                <img src="/images/Search.svg" alt="" style="padding: 8px;">
+                                <input type="text" placeholder="Search">
+                            </div>                            
+                            <button type="submit">Search</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile">
+                            <img src="/images/Profile.svg" alt="">
+                            <p style="margin-left: 8px; margin-right: 8px;">Unis Badri</p>
+                            <img src="/images/Down.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <p class="pagination"><b>Cars > </b>List Car</p>
+                <div class="pagetitle">
+                    <h2>List Car</h2>
+                    <a href="addCars" style="list-style: none;">
+                        <button class="addbutton">
+                            <img src="/images/Add.svg" alt="">
+                            <p style="margin-left: 12px;">Add New Car</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="filter-button" style="margin-bottom: 24px;">
+                    <button type="button">All</button>
+                    <button type="button">Small</button>
+                    <button type="button">Medium</button>
+                    <button type="button">Large</button>
+                </div>
+                <div class="card-container">
+                    <!-- <div class="card">
+                        <div class="card-header">
+                            <img src="/images/Mobil.png" alt="">
+                        </div>                        
+                        <p class="name">Nama/Tipe Mobil</p>
+                        <p class="price">Rp 430.000 / hari</p>
+                        <p class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i>Updated at 4 Apr 2022, 09.00</p>
+                        <div class="card-button">
+                            <button type="button" class="delete"><i class="fa-solid fa-trash" style="margin-right: 12px;"></i>Delete</button>
+                            <button type="button" class="edit">
+                                <a href="editCars" style="text-decoration: none; color:white;">
+                                    <i class="fa-regular fa-pen-to-square" style="margin-right: 12px;"></i>
+                                    Edit
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/Mobil.png" alt="">
+                        </div>                        
+                        <p class="name">Nama/Tipe Mobil</p>
+                        <p class="price">Rp 430.000 / hari</p>
+                        <p class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i>Updated at 4 Apr 2022, 09.00</p>
+                        <div class="card-button">
+                            <button type="button" class="delete"><i class="fa-solid fa-trash" style="margin-right: 12px;"></i>Delete</button>
+                            <button type="button" class="edit">
+                                <a href="editCars" style="text-decoration: none; color:white;">
+                                    <i class="fa-regular fa-pen-to-square" style="margin-right: 12px;"></i>
+                                    Edit
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/Mobil.png" alt="">
+                        </div>                        
+                        <p class="name">Nama/Tipe Mobil</p>
+                        <p class="price">Rp 430.000 / hari</p>
+                        <p class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i>Updated at 4 Apr 2022, 09.00</p>
+                        <div class="card-button">
+                            <button type="button" class="delete"><i class="fa-solid fa-trash" style="margin-right: 12px;"></i>Delete</button>
+                            <button type="button" class="edit">
+                                <a href="editCars" style="text-decoration: none; color:white;">
+                                    <i class="fa-regular fa-pen-to-square" style="margin-right: 12px;"></i>
+                                    Edit
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="/images/Mobil.png" alt="">
+                        </div>                        
+                        <p class="name">Nama/Tipe Mobil</p>
+                        <p class="price">Rp 430.000 / hari</p>
+                        <p class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i>Updated at 4 Apr 2022, 09.00</p>
+                        <div class="card-button">
+                            <button type="button" class="delete"><i class="fa-solid fa-trash" style="margin-right: 12px;"></i>Delete</button>
+                            <button type="button" class="edit">
+                                <a href="editCars" style="text-decoration: none; color:white;">
+                                    <i class="fa-regular fa-pen-to-square" style="margin-right: 12px;"></i>
+                                    Edit
+                                </a>
+                            </button>
+                        </div>
+                    </div> -->
+                    <% data.forEach(car => { %>
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="<%= car.image %>" alt="">
+                            </div>                        
+                            <p class="name"><%= car.name %></p>
+                            <p class="price"><%= new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", }).format(car.price) %> / hari</p>
+                            <p class="time"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i> Updated at <%= car.updatedAt.toLocaleString() %></p>
+                            <div class="card-button">
+                                <button type="button" class="delete">
+                                    <a href="deleteCars/<%= car.id %>" style="text-decoration: none; color:#FA2C5A;"><i class="fa-solid fa-trash" style="margin-right: 12px;"></i>
+                                        Delete
+                                    </a>
+                                </button>                                
+                                <button type="button" class="edit">
+                                    <a href="editCars/<%= car.id %>" style="text-decoration: none; color:white;">
+                                        <i class="fa-regular fa-pen-to-square" style="margin-right: 12px;"></i>
+                                        Edit
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="/script/home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
