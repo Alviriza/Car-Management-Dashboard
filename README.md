@@ -89,3 +89,8 @@ Untuk ERD-nya dapat diakses melalui link berikut:
     }
 }
 ```
+## Cara Menjalankan Project Ini
+
+- Run Frontend : npm run front
+- Run Backend : npm run back
+- Enjoy!
