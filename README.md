@@ -3,7 +3,7 @@ Repository ini berisi tentang sebuah Dashboard dari Aplikasi Manajemen Mobil yan
 
 ## ERD (Entity Relationship Diagram)
 
-Untuk ERD-nya dapat diakses melalui link berikut: 
+Untuk ERD-nya dapat diakses melalui link berikut : https://dbdiagram.io/d/633da34ff0018a1c5f9f2fab
 
 ## Hyperlink
 
